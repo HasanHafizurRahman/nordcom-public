@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const Nav1 = () => {
   return (
-    <div className="flex w-full h-[112px] justify-center items-center mt-[-20px] px-[264px] flex-shrink-0 bg-black">
+    <div className="flex w-full h-[100px] justify-center items-center mt-[-20px] px-[264px] flex-shrink-0 bg-black">
       {/* Logo */}
       <div className="flex items-center pr-[307px]">
         <svg

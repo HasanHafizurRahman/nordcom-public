@@ -15,7 +15,13 @@
   h4 {
     @apply text-[18px] leading-7;
   }
+  p {
+    @apply text-[14px] leading-6;
+  }
   li {
+    @apply text-[14px] leading-6;
+  }
+  a {
     @apply text-[14px] leading-6;
   }
 }

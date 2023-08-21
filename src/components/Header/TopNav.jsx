@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const TopNav = () => {
   return (
-    <div className="flex w-full h-[56px] justify-between items-center flex-shrink-0 bg-black">
+    <div className="flex w-full h-[46px] justify-between items-center flex-shrink-0 bg-black">
       <div className="flex justify-between items-center w-full">
         {/* Icons */}
         <div className="flex justify-between gap-4 pl-[120px]">
