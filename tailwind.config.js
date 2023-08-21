@@ -25,7 +25,7 @@ module.exports = {
         },
       },
       colors: {
-        nordcomPrimary: "#68D237",
+        nordcomPrimary: "#68D237", //green-5
         nordcomSecondary: "#FFE923",
         nordcomAccent: "#FF8154",
         nordcomNeutral: "#ADADAD",
