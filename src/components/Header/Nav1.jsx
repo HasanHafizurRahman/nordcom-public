@@ -1,4 +1,5 @@
 "use client";
+import NCButton from "../reusable-components/NCButton";
 import NCIcon from "../reusable-components/NCIcon";
 
 const Nav1 = () => {
@@ -77,9 +78,13 @@ const Nav1 = () => {
         </div>
 
         {/* Search button */}
-        <button className="ml-2 px-4 py-2 h-11 bg-nordcomPrimary text-white rounded-md">
+        <NCButton
+          text="Search"
+          className="ml-2 px-4 py-1 h-11 bg-nordcomPrimary text-white rounded-md"
+        />
+        {/* <button className="ml-2 px-4 py-2 h-11 bg-nordcomPrimary text-white rounded-md">
           Search
-        </button>
+        </button> */}
 
         {/* Wishlist and Cart icons */}
         <div className="flex ml-4 space-x-4">
