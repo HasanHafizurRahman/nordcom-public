@@ -61,13 +61,3 @@ The global CSS styles define the base styling rules for various HTML elements to
 
 - `a`: Hyperlinks inherit the same font size and line height as paragraphs for consistency.
 
-## Usage
-
-To apply the Nordcom theme and global styling to your web application, follow these steps:
-
-1. Ensure you have Tailwind CSS set up in your project.
-2. Copy the theme configuration in your `tailwind.config.js` file.
-3. Create a global CSS file (e.g., `global.css`) and copy the global styling rules.
-4. Include the global CSS file in your application, either by importing it in your main entry point or linking it in your HTML file.
-
-By utilizing the Nordcom theme and global styling, you can maintain a cohesive design across your application while benefiting from the Tailwind CSS utility-first approach.
