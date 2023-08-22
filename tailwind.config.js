@@ -26,9 +26,9 @@ module.exports = {
       },
       colors: {
         nordcomPrimary: "#68D237", //green-5
-        nordcomSecondary: "#FFE923",
+        nordcomSecondary: "#FFE923", //yellow-5
         nordcomAccent: "#FF8154", //red-5
-        nordcomNeutral: "#ADADAD",
+        nordcomNeutral: "#ADADAD", //gray-3
       },
       fontFamily: {
         nordcomFontFamily: ["Work Sans", "sans-serif"],

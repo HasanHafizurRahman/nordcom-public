@@ -82,9 +82,6 @@ const Nav1 = () => {
           text="Search"
           className="ml-2 px-4 py-1 h-11 bg-nordcomPrimary text-white rounded-md"
         />
-        {/* <button className="ml-2 px-4 py-2 h-11 bg-nordcomPrimary text-white rounded-md">
-          Search
-        </button> */}
 
         {/* Wishlist and Cart icons */}
         <div className="flex ml-4 space-x-4">
