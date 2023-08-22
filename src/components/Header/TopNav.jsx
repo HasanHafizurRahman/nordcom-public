@@ -1,48 +1,16 @@
 "use client";
-import { Icon } from "@iconify/react";
+import NCIcon from "../reusable-components/NCIcon";
 
 const TopNav = () => {
   return (
     <div className="flex w-full h-[46px] justify-between items-center flex-shrink-0 bg-black">
       <div className="flex justify-between items-center w-full">
         {/* Icons */}
-        <div className="flex justify-between gap-4 pl-[120px]">
-          <Icon
-            icon="ant-design:facebook-outlined"
-            style={{
-              color: "white",
-              height: "16px",
-              width: "16px",
-              flexShrink: 0,
-            }}
-          />
-          <Icon
-            icon="iconoir:linkedin"
-            style={{
-              color: "white",
-              height: "16px",
-              width: "16px",
-              flexShrink: 0,
-            }}
-          />
-          <Icon
-            icon="teenyicons:twitter-outline"
-            style={{
-              color: "white",
-              height: "16px",
-              width: "16px",
-              flexShrink: 0,
-            }}
-          />
-          <Icon
-            icon="ic:outline-mail"
-            style={{
-              color: "white",
-              height: "16px",
-              width: "16px",
-              flexShrink: 0,
-            }}
-          />
+        <div className="flex justify-between gap-3 pl-[120px]">
+          <NCIcon iconName="ei:sc-facebook" color="white" fontSize="16px" />
+          <NCIcon iconName="ri:linkedin-fill" color="white" fontSize="16px" />
+          <NCIcon iconName="ri:twitter-line" color="white" fontSize="16px" />
+          <NCIcon iconName="ic:outline-mail" color="white" fontSize="16px" />
         </div>
 
         {/* List Items */}

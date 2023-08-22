@@ -1,6 +1,6 @@
 "use client";
-import { Icon } from "@iconify/react";
 import { Menu } from "@headlessui/react";
+import NCIcon from "../reusable-components/NCIcon";
 
 const Nav2 = () => {
   return (
@@ -9,14 +9,16 @@ const Nav2 = () => {
       <div className="flex items-center space-x-2 pl-[115px]">
         <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="flex items-center space-x-4 cursor-pointer">
-            <Icon
-              icon="ant-design:bars-outlined"
-              style={{ fontSize: "20px", color: "black" }}
+            <NCIcon
+              iconName="ant-design:bars-outlined"
+              fontSize="20px"
+              color="black"
             />
             <p className="pr-4">Category</p>
-            <Icon
-              icon="ant-design:down-outlined"
-              style={{ fontSize: "16px", color: "gray" }}
+            <NCIcon
+              iconName="ant-design:down-outlined"
+              fontSize="16px"
+              color="gray"
             />
           </Menu.Button>
           <Menu.Items className="absolute left-0 mt-2 bg-white border rounded-md shadow-lg">
@@ -53,9 +55,10 @@ const Nav2 = () => {
         <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="flex items-center space-x-2 cursor-pointer">
             <p>New Product</p>
-            <Icon
-              icon="ant-design:down-outlined"
-              style={{ fontSize: "16px", color: "gray" }}
+            <NCIcon
+              iconName="ant-design:down-outlined"
+              fontSize="16px"
+              color="gray"
             />
           </Menu.Button>
           <Menu.Items className="absolute left-0 mt-2 bg-white border rounded-md shadow-lg">
@@ -82,14 +85,11 @@ const Nav2 = () => {
 
       {/* Right Section */}
       <div className="flex items-center space-x-4 pr-20">
-        <Icon icon="iconoir:delivery-truck" style={{ fontSize: "20px" }} />
+        <NCIcon iconName="iconoir:delivery-truck" fontSize="20px" />
         <a href="#" className="text-black">
           Track your order
         </a>
-        <Icon
-          icon="material-symbols:person-outline"
-          style={{ fontSize: "20px" }}
-        />
+        <NCIcon iconName="material-symbols:person-outline" fontSize="20px" />
         <a href="#" className="text-black">
           Sign in/Register
         </a>

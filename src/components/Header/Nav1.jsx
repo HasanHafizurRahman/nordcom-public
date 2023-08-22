@@ -1,5 +1,5 @@
 "use client";
-import { Icon } from "@iconify/react";
+import NCIcon from "../reusable-components/NCIcon";
 
 const Nav1 = () => {
   return (
@@ -66,15 +66,13 @@ const Nav1 = () => {
             </option>
             {/* Add your options here */}
           </select>
-          <Icon
-            icon="eva:arrow-ios-downward-fill"
-            style={{
-              position: "absolute",
-              top: "50%",
-              right: "0.5rem",
-              transform: "translateY(-50%)",
-              color: "gray",
-            }}
+          <NCIcon
+            iconName="eva:arrow-ios-downward-fill"
+            color="gray"
+            position="absolute"
+            top="50%"
+            right="0.5rem"
+            transform="translateY(-50%)"
           />
         </div>
 
@@ -85,13 +83,15 @@ const Nav1 = () => {
 
         {/* Wishlist and Cart icons */}
         <div className="flex ml-4 space-x-4">
-          <Icon
-            icon="ant-design:heart-outlined"
-            style={{ color: "white", fontSize: "20px" }}
+          <NCIcon
+            iconName="ant-design:heart-outlined"
+            color="white"
+            fontSize="20px"
           />
-          <Icon
-            icon="ant-design:shopping-cart-outlined"
-            style={{ color: "white", fontSize: "20px" }}
+          <NCIcon
+            iconName="ant-design:shopping-cart-outlined"
+            color="white"
+            fontSize="20px"
           />
         </div>
       </div>
