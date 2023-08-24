@@ -78,10 +78,7 @@ const Nav1 = () => {
         </div>
 
         {/* Search button */}
-        <NCButton
-          text="Search"
-          className="ml-2 px-4 py-1 h-11 bg-nordcomPrimary text-white rounded-md"
-        />
+        <NCButton text="Search" className="ml-2 h-11" />
 
         {/* Wishlist and Cart icons */}
         <div className="flex ml-4 space-x-4">

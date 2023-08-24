@@ -15,6 +15,9 @@
   h4 {
     @apply text-[18px] leading-7;
   }
+  h5 {
+    @apply text-[16px] leading-6;
+  }
   p {
     @apply text-[14px] leading-6;
   }
