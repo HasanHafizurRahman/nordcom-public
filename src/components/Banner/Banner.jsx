@@ -18,12 +18,12 @@ const Banner = () => {
   const backgroundImageUrl =
     "https://img.freepik.com/free-photo/shopping-cart-filled-with-coins-copy-space-background_23-2148305919.jpg?w=740&t=st=1692892634~exp=1692893234~hmac=89fada53058f4e29cccd3d1937387d61869534077782c23cea1bd1e295ea1ed8";
   return (
-    <div className="px-1 md:px-8 py-4 w-full overflow-x-hidden">
+    <div className="px-1 md:px-8 py-4">
       {/* Desktop View */}
       <div className="hidden md:flex gap-4">
         {/* Left Card */}
         <div
-          className="w-[18%] h-[552px] bg-gray-100 bg-cover bg-no-repeat"
+          className="w-[18%] h-[554px] bg-gray-100 bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(${backgroundImageUrl})` }}
         >
           <div className="flex flex-col justify-between h-full px-6 py-10">
@@ -39,7 +39,7 @@ const Banner = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="grid grid-cols-[700px] gap-4">
+        <div className="w-[56%] flex flex-col gap-4">
           {/* Top Middle Carousel Section */}
           <div className="col-span-1">
             <Swiper
@@ -47,9 +47,6 @@ const Banner = () => {
               spaceBetween={50}
               slidesPerView={1}
               navigation
-              // pagination={{ clickable: true }}
-              // scrollbar={{ draggable: true }}
-              // autoplay={{ delay: 500 }}
             >
               <SwiperSlide>
                 <SliderBanner
@@ -115,10 +112,11 @@ const Banner = () => {
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-[320px] gap-4">
+
+        <div className="w-[24%] flex flex-col gap-4">
           {/* Top Right Card */}
           <div
-            className="col-span-1 h-[172px] bg-gray-100 bg-cover bg-no-repeat"
+            className="col-span-1 h-[175px] bg-gray-100 bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${backgroundImageUrl})` }}
           >
             <div className="pt-11 pl-7 ">
@@ -129,7 +127,7 @@ const Banner = () => {
           </div>
           {/* Middle Right Card */}
           <div
-            className="col-span-1 h-[172px] bg-gray-100 bg-cover bg-no-repeat"
+            className="col-span-1 h-[175px] bg-gray-100 bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${backgroundImageUrl})` }}
           >
             <div className="pt-11 pl-7 ">
