@@ -1,18 +1,16 @@
 "use client";
 import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, A11y, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import SliderBanner from "./SliderBanner";
 import MobileSliderBanner from "./MobileSliderBanner";
 import NCButton from "../reusable-components/NCButton";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
-// import "swiper/css/autoplay";
 
 const Banner = () => {
   const backgroundImageUrl =
@@ -43,10 +41,11 @@ const Banner = () => {
           {/* Top Middle Carousel Section */}
           <div className="col-span-1">
             <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              modules={[Navigation, A11y, Autoplay]}
               spaceBetween={50}
               slidesPerView={1}
               navigation
+              autoplay={true}
             >
               <SwiperSlide>
                 <SliderBanner
@@ -167,10 +166,11 @@ const Banner = () => {
       <div className="md:hidden space-y-4">
         {/* Slider Carousel (Full Width) */}
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
           navigation
+          autoplay={true}
         >
           <SwiperSlide>
             <MobileSliderBanner
@@ -209,8 +209,7 @@ const Banner = () => {
             <h3 className="font-semibold pb-3">Laptop Gaming</h3>
             <NCButton text="Buy Now" />
           </div>
-        </div>
-
+        </div>{" "}
         {/* Top Right and Middle Right Cards */}
         <div className="space-y-4">
           <div
@@ -233,8 +232,7 @@ const Banner = () => {
               <h5>Buy 1 Get 1</h5>
             </div>
           </div>
-        </div>
-
+        </div>{" "}
         {/* Middle Bottom Cards */}
         <div className="space-y-4">
           <div
@@ -268,7 +266,6 @@ const Banner = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Right Cards */}
         <div className="flex space-x-4">
           <div
