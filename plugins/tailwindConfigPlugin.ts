@@ -1,16 +1,16 @@
 import plugin from "tailwindcss/plugin";
-import hexRgb from 'hex-rgb'
+import hexRgb from "hex-rgb";
 
 // ------------------------------
 // Helpers
 // ------------------------------
 type Options = {
-  colorThemes?: Record<string, any>
-}
+  colorThemes?: Record<string, any>;
+};
 
 function getRgbChannels(hex: string) {
-  const { red, green, blue } = hexRgb(hex)
-  return `${red} ${green} ${blue}`
+  const { red, green, blue } = hexRgb(hex);
+  return `${red} ${green} ${blue}`;
 }
 
 // Generate CSS variables
@@ -20,14 +20,14 @@ function getCssVariableDeclarations(
   output: Record<string, string> = {}
 ): Record<string, string> {
   Object.entries(input).forEach(([key, value]) => {
-    const newPath = [...path, key]
-    if (typeof value !== 'string') {
-      getCssVariableDeclarations(value, newPath, output)
+    const newPath = [...path, key];
+    if (typeof value !== "string") {
+      getCssVariableDeclarations(value, newPath, output);
     } else {
-      output[`--${newPath.join('-')}`] = getRgbChannels(value)
+      output[`--${newPath.join("-")}`] = getRgbChannels(value);
     }
-  })
-  return output
+  });
+  return output;
 }
 
 // Generate color extension object
@@ -37,53 +37,78 @@ function getColorUtilitiesWithCssVariableReferences(
 ): Record<string, any> {
   return Object.fromEntries(
     Object.entries(input).map(([key, value]) => {
-      const newPath = [...path, key]
-      if (typeof value !== 'string') {
-        return [key, getColorUtilitiesWithCssVariableReferences(value, newPath)]
+      const newPath = [...path, key];
+      if (typeof value !== "string") {
+        return [
+          key,
+          getColorUtilitiesWithCssVariableReferences(value, newPath),
+        ];
       } else {
-        return [key, `rgb(var(--${newPath.join('-')}) / <alpha-value>)`]
+        return [key, `rgb(var(--${newPath.join("-")}) / <alpha-value>)`];
       }
     })
-  )
+  );
 }
 
 // Check for valid color themes input
 function checkForValidColorThemesInput(input: Record<string, any>) {
   const isValid =
-    typeof input === 'object' && Object.keys(input).some((key) => typeof input[key] === 'object')
+    typeof input === "object" &&
+    Object.keys(input).some((key) => typeof input[key] === "object");
   if (!isValid) {
     throw new Error(
-      'The Multi-Theme Plugin expects a `colorThemes` option passed to it, which contains at least one theme object.'
-    )
+      "The Multi-Theme Plugin expects a `colorThemes` option passed to it, which contains at least one theme object."
+    );
   }
 }
 
 export const tailwindConfigs = plugin.withOptions(
   function (options: Options) {
-    const colorThemes = options?.colorThemes ?? fallbackThemes
-    checkForValidColorThemesInput(colorThemes)
+    const colorThemes = options?.colorThemes ?? fallbackThemes;
+    checkForValidColorThemesInput(colorThemes);
     return function ({ addBase }) {
       addBase({
-        ':root': getCssVariableDeclarations(Object.values(colorThemes)[0] as Record<string, any>),
-      })
+        ":root": getCssVariableDeclarations(
+          Object.values(colorThemes)[0] as Record<string, any>
+        ),
+      });
 
       addBase({
-        '.example': {
-          '@apply relative border rounded-2xl': {}
-        }
-      })
+        ".example": {
+          "@apply relative border rounded-2xl": {},
+        },
+      });
+      addBase({
+        h1: {
+          "@apply text-[2.125rem] leading-[2.625rem]": {},
+        },
+        h2: {
+          "@apply text-2xl": {},
+        },
+        h3: {
+          "@apply text-xl": {},
+        },
+        h4: {
+          "@apply text-lg": {},
+        },
+        h5: {
+          "@apply text-base": {},
+        },
+      });
 
       Object.entries(colorThemes).forEach(([key, value]) => {
         addBase({
-          [`[data-theme="${key}"]`]: getCssVariableDeclarations(value as Record<string, any>),
-        })
-      })
-    }
+          [`[data-theme="${key}"]`]: getCssVariableDeclarations(
+            value as Record<string, any>
+          ),
+        });
+      });
+    };
   },
 
   function (options: Options) {
-    const colorThemes = options?.colorThemes ?? fallbackThemes
-    checkForValidColorThemesInput(colorThemes)
+    const colorThemes = options?.colorThemes ?? fallbackThemes;
+    checkForValidColorThemesInput(colorThemes);
     return {
       theme: {
         extend: {
@@ -92,6 +117,6 @@ export const tailwindConfigs = plugin.withOptions(
           ),
         },
       },
-    }
+    };
   }
-)
+);
