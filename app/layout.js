@@ -1,10 +1,10 @@
 import { Providers } from "@/lib/state-management/providers";
-import { Lato } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const lato = Lato({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
+const workSans = Work_Sans({
+  weight: ["500", "600"],
+  style: ["normal"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -17,7 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={lato.className} suppressHydrationWarning={true}>
+      <body
+        className={`${workSans.className} antialiased text-slate-500 bg-white`}
+        suppressHydrationWarning={true}
+        data-theme="main"
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
