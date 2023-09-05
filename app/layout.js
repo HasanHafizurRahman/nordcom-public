@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${workSans.className} antialiased text-slate-500 bg-white`}
+        className={`${workSans.className} antialiased text-black bg-white`}
         suppressHydrationWarning={true}
         data-theme="main"
       >
