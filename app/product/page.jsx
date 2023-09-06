@@ -1,8 +1,7 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumb";
 import React from "react";
-import categorydata from "./categoryData.json";
-import CategoryList from "@/components/CategoryList";
+import CategoryList from "@/components/CategoryItem";
 import ProductList from "@/components/ProductList";
 
 const page = () => {
@@ -17,9 +16,10 @@ const page = () => {
       <div className="container mx-auto">
         <Breadcrumb paths={paths} />
       </div>
-      <div className="flex container mx-auto">
+      <div className="flex container mx-auto gap-20">
         <div className="container mx-auto w-[30%]">
-          <CategoryList data={categorydata} />
+          
+          <CategoryList />
         </div>
         <div className="container mx-auto w-[70%]">
           <ProductList />
