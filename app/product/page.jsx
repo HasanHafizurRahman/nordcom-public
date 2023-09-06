@@ -3,6 +3,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import React from "react";
 import CategoryList from "@/components/CategoryItem";
 import ProductList from "@/components/ProductList";
+import BrandTags from "@/components/BrandTags";
+import ColorSection from "@/components/ColorSection";
+import PriceRange from "@/components/PriceRange";
 
 const page = () => {
   const paths = [
@@ -17,11 +20,13 @@ const page = () => {
         <Breadcrumb paths={paths} />
       </div>
       <div className="flex container mx-auto gap-20">
-        <div className="container mx-auto w-[30%]">
-          
+        <div className="container mx-auto w-[16.9375rem]">
           <CategoryList />
+          <BrandTags />
+          <ColorSection />
+          <PriceRange />
         </div>
-        <div className="container mx-auto w-[70%]">
+        <div className="container mx-auto">
           <ProductList />
         </div>
       </div>
