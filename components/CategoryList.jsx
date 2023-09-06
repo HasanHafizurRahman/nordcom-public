@@ -19,7 +19,7 @@ const CategoryList = ({ categories }) => {
         <li key={index}>
           <div
             className={`${
-              openCategory === index ? "border border-green-500" : "bg-white"
+              openCategory === index ? "border border-primary-19" : "bg-white"
             } p-2 rounded flex items-start justify-between cursor-pointer w-68 h-10 px-4 gap-44 flex-shrink-0`}
             onClick={() => toggleCategory(index)}
           >

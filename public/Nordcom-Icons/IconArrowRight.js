@@ -1,6 +1,6 @@
 import React from "react";
 
-const IconArrowLeft = ({ size = 24, color }) => {
+const IconArrowRight = ({ size = 24, color }) => {
   return (
     <div>
       <svg
@@ -20,4 +20,4 @@ const IconArrowLeft = ({ size = 24, color }) => {
   );
 };
 
-export default IconArrowLeft;
+export default IconArrowRight;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Product from "./Product"; // Import the Product component
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa"; // Import previous and next icons
+import IconArrowRight from "@/public/Nordcom-Icons/IconArrowRight";
+import IconArrowLeft from "@/public/Nordcom-Icons/IconArrowLeft";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -48,12 +49,12 @@ const ProductList = () => {
   return (
     <div className="grid grid-cols-4 gap-4">
       {renderProducts()}
-      <div className="col-span-4 text-center mt-4">
+      <div className="flex col-span-4 justify-end text-center mt-4 items-center">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           className="px-3 py-1 rounded-md mr-2"
         >
-          <FaAngleLeft />
+          <IconArrowLeft />
         </button>
 
         {getPageNumbers().map((number) => (
@@ -74,7 +75,7 @@ const ProductList = () => {
           onClick={() => handlePageChange(currentPage + 1)}
           className="bg-blue-5 px-3 py-1 rounded-md ml-2 hover:bg-blue-5"
         >
-          <FaAngleRight />
+          <IconArrowRight />
         </button>
       </div>
     </div>
