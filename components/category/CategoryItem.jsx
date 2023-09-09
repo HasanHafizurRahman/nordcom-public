@@ -1,12 +1,14 @@
-
+import React from "react";
 import { categories } from "./CategoryData";
 import CategoryList from "./CategoryList";
 
-export default function CategoryItem() {
+const CategoryItem = () => {
   return (
-    <div className="py-4">
-      <h1 className="text-2xl font-bold">Categories</h1>
+    <div className="">
+      <h3 className="font-medium pt-[1.5rem] pb-4">Category</h3>
       <CategoryList categories={categories} />
     </div>
   );
-}
+};
+
+export default CategoryItem;

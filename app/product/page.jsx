@@ -4,8 +4,8 @@ import React from "react";
 import BrandTags from "@/components/BrandTags";
 import ColorSection from "@/components/ColorSection";
 import PriceRange from "@/components/PriceRange";
-import CategoryList from "@/components/category/CategoryList";
 import ProductList from "@/components/product/ProductList";
+import CategoryItem from "@/components/category/CategoryItem";
 
 const page = () => {
   const paths = [
@@ -19,14 +19,14 @@ const page = () => {
       <div className="container mx-auto">
         <Breadcrumb paths={paths} />
       </div>
-      <div className="flex container mx-auto gap-20">
-        <div className="container mx-auto w-[16.9375rem]">
-          <CategoryList />
-          <BrandTags />
+      <div className="flex container mx-auto gap-[7rem]">
+        <div className="">
+          <CategoryItem />
+          {/* <BrandTags />
           <ColorSection />
-          <PriceRange />
+          <PriceRange /> */}
         </div>
-        <div className="container mx-auto">
+        <div className="flex-1">
           <ProductList />
         </div>
       </div>

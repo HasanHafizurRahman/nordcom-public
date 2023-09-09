@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import IconArrowDown from "@/public/Nordcom-Icons/IconArrowDown";
 import IconArrowUp from "@/public/Nordcom-Icons/IconArrowUp";
-import { useState } from "react";
 
 const CategoryList = ({ categories }) => {
   const [openCategory, setOpenCategory] = useState(null);
@@ -19,8 +19,10 @@ const CategoryList = ({ categories }) => {
         <li key={index}>
           <div
             className={`${
-              openCategory === index ? "border border-primary-19" : "bg-white"
-            } p-2 rounded flex items-start justify-between cursor-pointer w-68 h-10 px-4 gap-44 flex-shrink-0`}
+              openCategory === index
+                ? "border border-primary-19 font-medium"
+                : "bg-white font-normal"
+            } pb-2 rounded flex items-start justify-between cursor-pointer w-68 h-10 px-4 gap-44 flex-shrink-0`}
             onClick={() => toggleCategory(index)}
           >
             {category.name}
@@ -31,7 +33,7 @@ const CategoryList = ({ categories }) => {
             )}
           </div>
           {openCategory === index && (
-            <ul className="pl-2 cursor-pointer">
+            <ul className="pl-4 cursor-pointer">
               <CategoryList categories={category.subcategories} />
             </ul>
           )}
@@ -40,4 +42,5 @@ const CategoryList = ({ categories }) => {
     </ul>
   );
 };
+
 export default CategoryList;
