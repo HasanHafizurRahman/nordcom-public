@@ -1,11 +1,11 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumb";
 import React from "react";
-import CategoryList from "@/components/CategoryItem";
-import ProductList from "@/components/ProductList";
 import BrandTags from "@/components/BrandTags";
 import ColorSection from "@/components/ColorSection";
 import PriceRange from "@/components/PriceRange";
+import CategoryList from "@/components/category/CategoryList";
+import ProductList from "@/components/product/ProductList";
 
 const page = () => {
   const paths = [

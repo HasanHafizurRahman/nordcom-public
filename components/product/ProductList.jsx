@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Product from "./Product"; // Import the Product component
 import IconArrowRight from "@/public/Nordcom-Icons/IconArrowRight";
 import IconArrowLeft from "@/public/Nordcom-Icons/IconArrowLeft";
+import Product from "./Product";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Product = ({ product }) => {
+const ProductDetail = ({ product }) => {
   return (
     <div className="w-[172px] flex flex-col">
       <img
@@ -10,9 +10,9 @@ const Product = ({ product }) => {
       />
       <p className="text-sm">{product.title}</p>
       <h4 className="font-semibold">Price: ${product.price}</h4>
-      <p className="text-xs text-primary-26">by Lavioka Copany</p>
+      <p className="text-xs text-primary-26">by Lavioka Company</p>
     </div>
   );
 };
 
-export default Product;
+export default ProductDetail;
