@@ -22,7 +22,7 @@ const CategoryList = ({ categories }) => {
               openCategory === index
                 ? "border border-primary-19 font-medium"
                 : "bg-white font-normal"
-            } pb-2 rounded flex items-start justify-between cursor-pointer w-68 h-10 px-4 gap-44 flex-shrink-0`}
+            } p-2 rounded flex items-center justify-between cursor-pointer w-68 h-10 px-4 gap-44 flex-shrink-0`}
             onClick={() => toggleCategory(index)}
           >
             {category.name}
