@@ -23,8 +23,8 @@ const page = () => {
         <div className="">
           <CategoryItem />
           <BrandTags />
-          <ColorSection />
-          <PriceRange />
+          {/* <ColorSection />
+          <PriceRange /> */}
         </div>
         <div className="flex-1">
           <ProductList />
