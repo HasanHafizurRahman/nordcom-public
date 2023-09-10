@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import BrandTags from "@/components/BrandTags";
-import ColorSection from "@/components/ColorSection";
-import PriceRange from "@/components/PriceRange";
 import ProductList from "@/components/product/ProductList";
 import CategoryItem from "@/components/category/CategoryItem";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
+import BrandTags from "@/components/category/BrandTags";
+import ColorSection from "@/components/category/ColorSection";
+import PriceRange from "@/components/category/PriceRange";
 
 const page = () => {
   const paths = [
@@ -22,9 +22,9 @@ const page = () => {
       <div className="flex container mx-auto gap-[7rem]">
         <div className="">
           <CategoryItem />
-          {/* <BrandTags />
+          <BrandTags />
           <ColorSection />
-          <PriceRange /> */}
+          <PriceRange />
         </div>
         <div className="flex-1">
           <ProductList />
