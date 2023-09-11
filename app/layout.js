@@ -1,6 +1,7 @@
 import { Providers } from "@/lib/state-management/providers";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import ToastComponet from "@/components/notification/ToastComponet";
 
 const workSans = Work_Sans({
   weight: ["500", "600"],
@@ -22,7 +23,10 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
         data-theme="main"
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <ToastComponet />
+          {children}
+        </Providers>
       </body>
     </html>
   );
