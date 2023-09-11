@@ -49,10 +49,10 @@ const ProductList = () => {
   return (
     <div className="grid grid-cols-4 gap-4">
       {renderProducts()}
-      <div className="flex col-span-4 justify-end text-center mt-4 items-center">
+      <div className="flex col-span-4 justify-end text-center mt-8 mb-16 items-center gap-2">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
-          className="px-3 py-1 rounded-md mr-2"
+          className="flex justify-center px-1 py-2 w-[2.5rem] h-[2.5rem] border border-primary-31 rounded-lg"
         >
           <IconArrowLeft />
         </button>
@@ -65,7 +65,7 @@ const ProductList = () => {
               currentPage === number
                 ? "bg-primary-19 text-white"
                 : "text-primary-35"
-            } px-3 py-1 rounded-md mx-2 hover:bg-blue-5 hover:text-white`}
+            } px-1 py-2 w-[2.5rem] h-[2.5rem] border border-primary-31 rounded-lg`}
           >
             {number}
           </button>
@@ -73,7 +73,7 @@ const ProductList = () => {
 
         <button
           onClick={() => handlePageChange(currentPage + 1)}
-          className="bg-blue-5 px-3 py-1 rounded-md ml-2 hover:bg-blue-5"
+          className="flex justify-center bg-blue-5 px-1 py-2 w-[2.5rem] h-[2.5rem] border border-primary-31 rounded-lg"
         >
           <IconArrowRight />
         </button>
