@@ -1,11 +1,8 @@
 "use client";
-
-import ProductDetail from "@/components/product/ProductDetails";
+import ProductDetail from "@/app/product/ProductDetails";
 import { useEffect, useState } from "react";
 
 const SingleProductPage = ({ params: { id } }) => {
-  // const router = useRouter();
-
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
