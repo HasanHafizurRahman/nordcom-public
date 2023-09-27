@@ -1,7 +1,9 @@
 import IconStar_Filled from "@/public/Nordcom-Icons/IconStar_Filled";
 import React from "react";
+import UserProfileImage from "./UserProfileImage";
+import { userData } from "./userData";
 
-const Reviews = () => {
+const ReviewStats = () => {
   return (
     <div className="p-6 border border-primary-31 mt-[-1px]">
       <div className="flex justify-between">
@@ -94,23 +96,23 @@ const Reviews = () => {
           <div className="h-[100px] bg-primary-32 w-[1px]"></div>
         </div>
 
-        <div className="flex gap-8">
-          <div className="">
-            <div>
-              <svg class="HTdwVj" viewBox="0 0 100 100">
+        <div className="flex mt-3">
+          <div className="flex flex-col items-center pr-4">
+            <div className="pt-[12px] pr-[12px] pl-[12px]">
+              <svg class="w-full stroke-linecap-round" viewBox="0 0 100 100">
                 <path
-                  class="MN4M6g"
+                  class="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
                 <path
-                  class="_1KaZLR"
+                  class="stroke-[#388e3c]"
                   d="M50,4 A 46,46,0,1,1,8.377955586563111,69.58584741199336"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
-                <text class="_2Ix0io" x="50" y="50">
+                <text class="text-3xl font-medium fill-black" x="50" y="50">
                   3.4
                 </text>
               </svg>
@@ -119,82 +121,108 @@ const Reviews = () => {
               <span>Camera</span>
             </div>
           </div>
-          <div className="">
-            <div>
-              <svg class="HTdwVj" viewBox="0 0 100 100">
+          <div className="flex flex-col items-center pr-4">
+            <div className="pt-[12px] pr-[12px] pl-[12px]">
+              <svg class="w-full stroke-linecap-round" viewBox="0 0 100 100">
                 <path
-                  class="MN4M6g"
+                  class="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
                 <path
-                  class="_1KaZLR"
-                  d="M50,4 A 46,46,0,1,1,8.377955586563111,69.58584741199336"
+                  class="stroke-[#388e3c]"
+                  d="M50,4 A 46,46,0,1,1,4.814786466480321,41.38045952905668"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
-                <text class="_2Ix0io" x="50" y="50">
-                  3.4
+                <text
+                  class="fill-black text-3xl font-medium text-center"
+                  x="50"
+                  y="50"
+                >
+                  3.9
                 </text>
               </svg>
             </div>
             <div>
-              <span>Camera</span>
+              <span>Battery</span>
             </div>
           </div>
-          <div className="">
-            <div>
-              <svg class="HTdwVj" viewBox="0 0 100 100">
+          <div className="flex flex-col items-center pr-4">
+            <div className="pt-[12px] pr-[12px] pl-[12px]">
+              <svg
+                className="w-full stroke-linecap-round"
+                viewBox="0 0 100 100"
+              >
                 <path
-                  class="MN4M6g"
+                  className="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
                 <path
-                  class="_1KaZLR"
-                  d="M50,4 A 46,46,0,1,1,8.377955586563111,69.58584741199336"
+                  class="stroke-[#388e3c]"
+                  d="M50,4 A 46,46,0,1,1,4.090770492299505,47.11163610165161"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
-                <text class="_2Ix0io" x="50" y="50">
-                  3.4
+                <text
+                  class="fill-[#212121] text-3xl font-semibold pr-[12px]"
+                  x="50"
+                  y="50"
+                >
+                  3.8
                 </text>
               </svg>
             </div>
             <div>
-              <span>Camera</span>
+              <span>Display</span>
             </div>
           </div>
-          <div className="">
-            <div>
-              <svg class="HTdwVj" viewBox="0 0 100 100">
+          <div className="flex flex-col items-center pr-4">
+            <div className="pt-[12px] pr-[12px] pl-[12px]">
+              <svg class="w-full stroke-linecap-round" viewBox="0 0 100 100">
                 <path
-                  class="MN4M6g"
+                  class="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
                 <path
-                  class="_1KaZLR"
-                  d="M50,4 A 46,46,0,1,1,8.377955586563111,69.58584741199336"
+                  class="stroke-[#388e3c]"
+                  d="M50,4 A 46,46,0,1,1,8.377955586563097,30.41415258800666"
                   stroke-width="8"
                   fill-opacity="0"
                 ></path>
-                <text class="_2Ix0io" x="50" y="50">
-                  3.4
+                <text
+                  class="fill-black text-3xl text-center font-medium"
+                  x="50"
+                  y="50"
+                >
+                  4.1
                 </text>
               </svg>
             </div>
             <div>
-              <span>Camera</span>
+              <span>Design</span>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* UserProfileImage list */}
+      <div className="flex flex-wrap mt-8">
+        {userData.map((user, index) => (
+          <UserProfileImage
+            key={index}
+            imageUrl={user.imageUrl}
+            showText={user.showText}
+          />
+        ))}
       </div>
     </div>
   );
 };
 
-export default Reviews;
+export default ReviewStats;

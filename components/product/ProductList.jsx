@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import IconArrowRight from "@/public/Nordcom-Icons/IconArrowRight";
 import IconArrowLeft from "@/public/Nordcom-Icons/IconArrowLeft";
 import Product from "./Product";
+import productsData from "./product.json";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -9,9 +10,7 @@ const ProductList = () => {
   const productsPerPage = 16;
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
+    setProducts(productsData);
   }, []);
 
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -47,7 +46,7 @@ const ProductList = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-6">
       {renderProducts()}
       <div className="flex col-span-4 justify-end text-center mt-8 mb-16 items-center gap-2">
         <button

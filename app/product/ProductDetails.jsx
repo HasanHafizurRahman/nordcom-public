@@ -17,7 +17,9 @@ import Storage from "./Storage";
 import Condition from "./Condition";
 import Product_Description from "./Product_Description";
 import Specifications from "./Specifications";
-import Reviews from "./Reviews";
+import ReviewStats from "./review/ReviewStats";
+import ReviewComment from "./review/ReviewComment";
+import QuestionAnswere from "./QuestionAnswere";
 
 export default function ProductDetails({ product }) {
   const [selectedImage, setSelectedImage] = useState(false);
@@ -44,9 +46,7 @@ export default function ProductDetails({ product }) {
           <div className="flex items-start gap-3">
             <div className="inline-flex items-center py-[0.125rem] pr-1 pl-[0.375rem] bg-primary-19 mb-2 rounded-md text-white">
               <span className="text-xs font-medium">4.4</span>
-              <span>
-                <IconStar_Filled color="white" size={10} />
-              </span>
+              <span className="text-xs">★</span>
             </div>
             <div className="text-sm text-primary-34">
               <span>1,08,426 Ratings&nbsp;</span>
@@ -80,15 +80,52 @@ export default function ProductDetails({ product }) {
           </div>
           {/* Rating & Review */}
           <div className="mt-6">
-            <Reviews />
+            <ReviewStats />
+            {/* Review Comment */}
+            <div>
+              <ReviewComment
+                rating={5}
+                title="Awesome"
+                content="It's a nice phone with such a low price.Camera is good enough.But the phone is getting heated while charging."
+                imageSrc="https://i.ibb.co/FYrJWTC/Photo-Fix-1673875449383.jpg"
+                author="KARTICK Tapadar"
+                isCertifiedBuyer={true}
+                location=", Kalyani"
+                likes={20}
+                comments={2}
+              />
+              <ReviewComment
+                rating={4}
+                title="Good"
+                content="Camera is good enough.But the phone is getting heated while charging."
+                imageSrc="https://i.ibb.co/FYrJWTC/Photo-Fix-1673875449383.jpg"
+                author="Palash Bhuiya"
+                isCertifiedBuyer={true}
+                location=", Keraniganj"
+                likes={50}
+                comments={20}
+              />
+              <ReviewComment
+                rating={4.5}
+                title="excellent"
+                content="It's a nice phone with such a low price.Camera is good enough.But the phone is getting heated while charging."
+                imageSrc="https://i.ibb.co/FYrJWTC/Photo-Fix-1673875449383.jpg"
+                author="Sakib Al Hasan"
+                isCertifiedBuyer={true}
+                location=", sylhet"
+                likes={10}
+                comments={12}
+              />
+              <div className="p-6 border border-primary-31 mt-[-1px]">
+                <button className="text-primary-19 font-medium hover:underline">
+                  All reviews
+                </button>
+              </div>
+            </div>
           </div>
-          {/* social media */}
-          <div className="flex items-center gap-4 mt-4">
-            <span className="text-sm mr-[3.56rem]">Share:</span>
-            <IconFacebook />
-            <IconLinkedin />
-            <IconTwitter />
-            <IconMail />
+          {/* Question and Answere */}
+          <div>
+            <QuestionAnswere />
           </div>
         </div>
       </div>
