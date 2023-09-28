@@ -38,12 +38,12 @@ export default function ProductDetails({ product }) {
     <div className="container">
       <div className="flex gap-[7.62rem]">
         <div
-          className={`w-[23rem] fixed z-10 ${isScrolled ? "top-4" : "top-18"}`}
+          className={`w-[23rem] fixed z-10 ${isScrolled ? "top-1" : "top-18"}`}
         >
           <ProductImageSlider product={product} />
           {isScrolled && (
             <div>
-              <h4 className="mb-2">
+              <h4 className="mb-1 line-clamp-1">
                 Infinix Smart 7 HD (Ink Black, 64 GB) (2 GB RAM)
               </h4>
 
@@ -59,12 +59,16 @@ export default function ProductDetails({ product }) {
                 </div>
               </div>
 
-              <h2 className="text-[1.75rem] font-medium mb-4">
+              <h2 className="text-[1.75rem] font-medium mb-2">
                 ${product.price}
               </h2>
             </div>
           )}
-          <Button className="w-full mt-7 h-[2.5rem] px-4 py-2 flex items-center gap-1 rounded-md text-white text-sm bg-primary-19 mr-4">
+          <Button
+            className={`w-full ${
+              isScrolled ? "mt-0" : "mt-7"
+            } h-[2.5rem] px-4 py-2 flex items-center gap-1 rounded-md text-white text-sm bg-primary-19 mr-4`}
+          >
             <IconCart size={16} color="white" />
             Add To Cart
           </Button>
