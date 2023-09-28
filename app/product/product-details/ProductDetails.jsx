@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import IconStar_Filled from "@/public/Nordcom-Icons/IconStar_Filled";
 import IconStar_Half from "@/public/Nordcom-Icons/IconStar_Half";
 import IconStar from "@/public/Nordcom-Icons/IconStar";
-import { Button } from "../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import IconHeart from "@/public/Nordcom-Icons/IconHeart";
 import IconFacebook from "@/public/Nordcom-Icons/IconFacebook";
 import IconLinkedin from "@/public/Nordcom-Icons/IconLinkedin";
@@ -31,7 +31,7 @@ export default function ProductDetails({ product }) {
   return (
     <div className="container">
       <div className="flex gap-[7.62rem]">
-        <div className="w-[23rem] fixed top-0 z-10">
+        <div className="w-[23rem] fixed top-18 z-10">
           <ProductImageSlider product={product} />
           <Button className="w-full mt-7 h-[2.5rem] px-4 py-2 flex items-center gap-1 rounded-md text-white text-sm bg-primary-19 mr-4">
             <IconCart size={16} color="white" />

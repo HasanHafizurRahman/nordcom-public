@@ -94,6 +94,13 @@ const ProductImageSlider = ({ product }) => {
         <SwiperSlide>
           <Image
             fill
+            src="https://i.ibb.co/jvQ4VFV/original-imagp279xqv69rjq.webp"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            fill
             src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
             alt=""
           />

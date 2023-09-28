@@ -16,10 +16,10 @@ const page = () => {
   ];
   return (
     <div className="container mx-auto">
-      <div className="container mx-auto">
+      <div>
         <Breadcrumb paths={paths} />
       </div>
-      <div className="flex container mx-auto gap-[7rem]">
+      <div className="flex gap-[7rem]">
         <div className="">
           <CategoryItem />
           <BrandTags />
