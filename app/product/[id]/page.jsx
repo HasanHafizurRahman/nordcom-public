@@ -28,7 +28,7 @@ const SingleProductPage = ({ params: { id } }) => {
 
   return (
     <div className="container mx-auto">
-      <div>
+      <div className="">
         <Breadcrumb paths={paths} />
       </div>
       {product ? <ProductDetail product={product} /> : <div>Loading...</div>}
