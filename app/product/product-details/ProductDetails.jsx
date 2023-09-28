@@ -74,23 +74,27 @@ export default function ProductDetails({ product }) {
           </Button>
         </div>
         <div className="flex-1 ml-[30.62rem]">
-          <h4 className="mb-2">
-            Infinix Smart 7 HD (Ink Black, 64 GB) (2 GB RAM)
-          </h4>
+          <div>
+            <h4 className="mb-2">
+              Infinix Smart 7 HD (Ink Black, 64 GB) (2 GB RAM)
+            </h4>
 
-          <div className="flex items-start gap-3">
-            <div className="inline-flex items-center py-[0.125rem] pr-1 pl-[0.375rem] bg-primary-19 mb-2 rounded-md text-white">
-              <span className="text-xs font-medium">4.4</span>
-              <span className="text-xs">★</span>
+            <div className="flex items-start gap-3">
+              <div className="inline-flex items-center py-[0.125rem] pr-1 pl-[0.375rem] bg-primary-19 mb-2 rounded-md text-white">
+                <span className="text-xs font-medium">4.4</span>
+                <span className="text-xs">★</span>
+              </div>
+              <div className="text-sm text-primary-34">
+                <span>1,08,426 Ratings&nbsp;</span>
+                <span class="_13vcmD">&amp;</span>
+                <span>&nbsp;7,548 Reviews</span>
+              </div>
             </div>
-            <div className="text-sm text-primary-34">
-              <span>1,08,426 Ratings&nbsp;</span>
-              <span class="_13vcmD">&amp;</span>
-              <span>&nbsp;7,548 Reviews</span>
-            </div>
+
+            <h2 className="text-[1.75rem] font-medium mb-4">
+              ${product.price}
+            </h2>
           </div>
-
-          <h2 className="text-[1.75rem] font-medium mb-4">${product.price}</h2>
 
           {/* color selection */}
           <div className="mb-[1.44rem]">
