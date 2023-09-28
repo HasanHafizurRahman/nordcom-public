@@ -1,9 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { useGetPokemonByNameQuery } from "@/features/api/apiSlice";
-import Image from "next/image";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
   return (
