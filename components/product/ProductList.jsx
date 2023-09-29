@@ -51,7 +51,7 @@ const ProductList = () => {
       <div className="flex col-span-4 justify-end text-center mt-8 mb-16 items-center gap-2">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
-          className="flex justify-center px-1 py-2 w-[2.5rem] h-[2.5rem] border border-primary-31 rounded-lg"
+          className="flex justify-center px-1 py-2 w-[2.5rem] h-[2.5rem] border border-primary-31 rounded-[5px]"
         >
           <IconArrowLeft />
         </button>

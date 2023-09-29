@@ -17,7 +17,7 @@ const IconEyeVisible = ({ size = 24, color = "#858585" }) => {
           clipRule="evenodd"
         />
         <path
-          fill="#858585"
+          fill={color}
           fillRule="evenodd"
           d="M13.616 10.384a2.286 2.286 0 1 0-3.232 3.232 2.286 2.286 0 0 0 3.232-3.232Zm1.01-1.01a3.714 3.714 0 1 0-5.252 5.252 3.714 3.714 0 0 0 5.252-5.252Z"
           clipRule="evenodd"
