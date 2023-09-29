@@ -88,8 +88,8 @@ export default function Home() {
                     <path
                       stroke="#fff"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
                       d="m2.08 4.05 5.129 3.669a1.333 1.333 0 0 0 1.55.001l5.158-3.68"
                     />
                   </g>

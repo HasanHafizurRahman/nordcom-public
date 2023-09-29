@@ -11,8 +11,8 @@ const IconDrink = ({ size = 24, color }) => {
       >
         <g
           stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
           clip-path="url(#a)"
         >
           <path stroke="#68D237" d="M5 5.25h4" />

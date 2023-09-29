@@ -13,8 +13,8 @@ const IconCart = ({ size = 24, color = "none" }) => {
           fill={color}
           stroke="currentColor"
           stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <path d="M6 6h24l-3 13H9m18 4H10L5 2H2" />
           <circle cx="25" cy="27" r="2" />

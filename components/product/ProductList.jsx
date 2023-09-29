@@ -46,9 +46,9 @@ const ProductList = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4  gap-6">
       {renderProducts()}
-      <div className="flex col-span-4 justify-end text-center mt-8 mb-16 items-center gap-2">
+      <div className="flex md:col-span-2 lg:col-span-4 justify-end text-center mt-8 mb-16 items-center gap-2">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           className="flex justify-center px-1 py-2 w-[2.5rem] h-[2.5rem] border border-primary-31 rounded-[5px]"

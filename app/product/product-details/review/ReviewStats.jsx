@@ -103,13 +103,13 @@ const ReviewStats = () => {
                 <path
                   class="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <path
                   class="stroke-[#388e3c]"
                   d="M50,4 A 46,46,0,1,1,8.377955586563111,69.58584741199336"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <text class="text-3xl font-medium fill-black" x="50" y="50">
@@ -127,13 +127,13 @@ const ReviewStats = () => {
                 <path
                   class="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <path
                   class="stroke-[#388e3c]"
                   d="M50,4 A 46,46,0,1,1,4.814786466480321,41.38045952905668"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <text
@@ -158,13 +158,13 @@ const ReviewStats = () => {
                 <path
                   className="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <path
                   class="stroke-[#388e3c]"
                   d="M50,4 A 46,46,0,1,1,4.090770492299505,47.11163610165161"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <text
@@ -186,13 +186,13 @@ const ReviewStats = () => {
                 <path
                   class="stroke-[#f0f0f0]"
                   d="M50,4 A 46,46,0,1,1,49.9999,4"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <path
                   class="stroke-[#388e3c]"
                   d="M50,4 A 46,46,0,1,1,8.377955586563097,30.41415258800666"
-                  stroke-width="8"
+                  strokeWidth="8"
                   fill-opacity="0"
                 ></path>
                 <text

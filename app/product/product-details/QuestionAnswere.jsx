@@ -35,7 +35,7 @@ const QuestionAnswere = () => {
                 <circle cx="6" cy="6" r="6" fill="#878787"></circle>
                 <path
                   stroke="#FFF"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   d="M3 6l2 2 4-4"
                   fill="#878787"
                 ></path>
@@ -80,7 +80,7 @@ const QuestionAnswere = () => {
                 <circle cx="6" cy="6" r="6" fill="#878787"></circle>
                 <path
                   stroke="#FFF"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   d="M3 6l2 2 4-4"
                   fill="#878787"
                 ></path>
@@ -125,7 +125,7 @@ const QuestionAnswere = () => {
                 <circle cx="6" cy="6" r="6" fill="#878787"></circle>
                 <path
                   stroke="#FFF"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   d="M3 6l2 2 4-4"
                   fill="#878787"
                 ></path>

@@ -9,8 +9,8 @@ const IconCosmetic = ({ size = 24, color }) => {
         height={size}
         fill={color}
         stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
         clip-path="url(#a)"
       >
         <path
