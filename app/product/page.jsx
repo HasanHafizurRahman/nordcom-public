@@ -24,7 +24,7 @@ const page = () => {
           <CategoryItem />
           <BrandTags />
           <ColorSection />
-          {/* <PriceRange /> */}
+          <PriceRange />
         </div>
         <div className="flex-1">
           <ProductList />

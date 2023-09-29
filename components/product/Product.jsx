@@ -7,26 +7,27 @@ import SoldOutBadge from "../badge/SoldOutBadge";
 import WatchALotBadge from "../badge/Watch_A_Lot_Badge";
 import IconHeart from "@/public/Nordcom-Icons/IconHeart";
 import IconEyeVisible from "@/public/Nordcom-Icons/IconEyeVisible";
+import IconShuffle from "@/public/Nordcom-Icons/IconShuffle";
 
 const Product = ({ product }) => {
-  // const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Generate the product route URL based on its id
   const productRoute = `/product/${product.id}`;
 
-  // const handleMouseEnter = () => {
-  //   setIsHovered(true);
-  // };
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false);
-  // };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <div
       className="w-[172px] flex flex-col relative"
-      // onMouseEnter={handleMouseEnter}
-      // onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="absolute top-2 left-2 z-10">
         {product.badges?.includes("New") && <NewBadge />}
@@ -34,16 +35,19 @@ const Product = ({ product }) => {
         {product.badges?.includes("Sold Out") && <SoldOutBadge />}
         {product.badges?.includes("Watch a lot") && <WatchALotBadge />}
       </div>
-      {/* {isHovered && (
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between p-2 z-10">
-          <button className="text-green-500 bg-black ml-2 p-0.5 rounded-lg">
-            <IconHeart />
+      {isHovered && (
+        <div className="absolute top-0 right-0 h-full flex flex-col gap-1 p-2 z-10">
+          <button className="bg-primary-31 p-1 rounded-full">
+            <IconHeart size={16} />
           </button>
-          <button className="text-green-500 bg-black mr-2 p-0.5 rounded-lg">
-            <IconEyeVisible />
+          <button className="bg-primary-31 p-1 rounded-full">
+            <IconEyeVisible size={16} />
+          </button>
+          <button className="bg-primary-25 p-1 rounded-full">
+            <IconShuffle size={16} color="white" />
           </button>
         </div>
-      )} */}
+      )}
       <div className="">
         <Link href={productRoute}>
           {/* Wrap the product in a Link */}
